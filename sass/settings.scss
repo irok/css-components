@@ -1,0 +1,57 @@
+/**
+ * サイト全体のデザイン設定
+ */
+$space-m:  15px;
+$space-s:  10px;
+$space-ss:  5px;
+
+$color-title: #333;
+$color-description: #666;
+$color-footer: #999;
+
+/**
+ * スペースに関するmixin
+ */
+@mixin space-inset-m   { padding: $space-m; }
+@mixin space-inset-s   { padding: $space-s; }
+@mixin space-inset-ssm { padding: $space-ss $space-m; }
+
+@mixin space-stack-m  { margin: 0 0 $space-m; }
+@mixin space-stack-s  { margin: 0 0 $space-s; }
+@mixin space-stack-ss { margin: 0 0 $space-ss; }
+
+/**
+ * フォントに関するmixin
+ */
+@mixin fontset-title-m {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+@mixin fontset-title-s {
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@mixin fontset-text-m {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@mixin fontset-text-s {
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+/**
+ * アイコンに関するmixin
+ */
+@mixin icon-date {
+  &::before {
+    padding-right: .25em;
+    font-family: FontAwesome;
+    content: "\f017";   // clock-o
+  }
+}

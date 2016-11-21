@@ -1,0 +1,23 @@
+/**
+ * サイトに依存しないオブジェクトの基本構造定義（object/media.scss）
+ */
+@import "utility";
+
+@mixin o-Media($imgWidth, $imgHeight, $imgMargin) {
+  @include clearfix;
+
+  &__image {
+    float: left;
+    width: $imgWidth;
+    height: $imgHeight;
+    background-position: center;
+    background-origin: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__copy {
+    min-height: $imgHeight;
+    margin: 0 0 0 ($imgWidth + $imgMargin);
+  }
+}

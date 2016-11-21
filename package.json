@@ -1,0 +1,26 @@
+{
+  "name": "css-components",
+  "version": "1.0.0",
+  "bugs": {
+    "url": "https://github.com/irok/css-components/issues"
+  },
+  "dependencies": {
+    "sanitize.css": "^4.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "homepage": "https://github.com/irok/css-components#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irok/css-components.git"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

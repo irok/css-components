@@ -1,0 +1,27 @@
+/**
+ * パネル（component/panel.scss）
+ */
+@import "settings";
+
+@mixin item($column) {
+  .c-Panel__item {
+    width: calc(100% / #{$column});
+  }
+}
+
+@mixin spaced-item($column, $margin) {
+  .c-Panel__item {
+    width: calc((100% - #{$margin} * #{$column - 1}) / #{$column});
+    margin-bottom: $margin;
+  }
+}
+
+.c-Panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &--col3spaced {
+    @include spaced-item(3, $space-s);
+  }
+}

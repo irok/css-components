@@ -1,0 +1,10 @@
+/**
+ * サイトに依存しないユーティリティ関数やMixin
+ */
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

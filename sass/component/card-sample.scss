@@ -1,0 +1,34 @@
+/**
+ * サイト用のカードコンポーネント
+ */
+@import "settings";
+@import "object/card";
+
+.c-CardSample {
+  @include o-Card(
+    320px, 180px,         // 幅と画像の高さ
+    $space-m,             // テキストコンテンツ部分のpadding
+    1.5px, #e0e0e0, 6px   // ボーダー
+  );
+
+  &__title {
+    @include space-stack-m;
+    @include fontset-title-m;
+    color: $color-title;
+  }
+
+  &__description {
+    @include space-stack-m;
+    @include fontset-text-m;
+    color: $color-description;
+  }
+
+  &__footer {
+    @include fontset-text-s;
+    color: $color-footer;
+  }
+
+  &__date {
+    @include icon-date;
+  }
+}

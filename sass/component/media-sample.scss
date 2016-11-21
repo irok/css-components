@@ -1,0 +1,51 @@
+/**
+ * サイト用のメディアコンポーネント
+ */
+@import "settings";
+@import "object/media";
+
+.c-MediaSample {
+  @include o-Media(
+    140px, 120px,     // 幅と画像の高さ
+    $space-s          // 画像とテキストのmargin
+  );
+
+  &__title {
+    @include space-stack-s;
+    @include fontset-title-m;
+  }
+
+  &__description {
+    @include space-stack-s;
+    @include fontset-text-m;
+    color: $color-title;
+  }
+
+  &__footer {
+    @include fontset-text-s;
+    color: $color-description;
+  }
+
+  &__date {
+    @include icon-date;
+    color: $color-footer;
+  }
+}
+
+.c-MediaMini {
+  @include o-Media(
+    60px, 60px,       // 幅と画像の高さ
+    $space-s          // 画像とテキストのmargin
+  );
+
+  &__description {
+    @include space-stack-ss;
+    @include fontset-text-m;
+    color: $color-description;
+  }
+
+  &__footer {
+    @include fontset-text-s;
+    color: $color-footer;
+  }
+}

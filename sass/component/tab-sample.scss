@@ -1,0 +1,24 @@
+/**
+ * サイト用のタブコンポーネント（component/tab-sample.scss）
+ * （タブの基本構造と装飾用mixinを取り込んで、足りない部分を定義する）
+ */
+@import "settings";
+@import "object/tab";
+
+.c-TabSample {
+  @include o-Tab;
+  @include o-Tab--Border(2px, #9eb4db);
+  @include o-Tab--Color(#333, #1d3994);
+  @include o-Tab--BgColor(#fff, #e6ecfe);
+  @include o-Tab--Spacing(-2px);
+
+  &__tab {
+    @include space-inset-ssm;
+    @include fontset-title-s;
+  }
+
+  &__panel {
+    @include space-inset-s;
+    @include fontset-text-m;
+  }
+}

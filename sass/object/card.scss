@@ -1,0 +1,30 @@
+/**
+ * カードの基本構造定義
+ */
+@mixin o-Card($imgWidth, $imgHeight, $padding, $borderWidth, $borderColor, $borderRadius) {
+  width: $imgWidth;
+
+  &__image, &__copy {
+    border: $borderWidth solid $borderColor;
+  }
+
+  &__image {
+    height: $imgHeight;
+    border-bottom: 0;
+    @if $borderRadius {
+      border-radius: $borderRadius $borderRadius 0 0;
+    }
+    background-position: center;
+    background-origin: border-box;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__copy {
+    padding: $padding;
+    border-top: 0;
+    @if $borderRadius {
+      border-radius: 0 0 $borderRadius $borderRadius;
+    }
+  }
+}

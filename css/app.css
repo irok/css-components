@@ -1,0 +1,347 @@
+@charset "UTF-8";
+/**
+ * HTMLリセットなど
+ */
+@import url("../node_modules/sanitize.css/sanitize.css");
+:root {
+  font-size: 80%;
+}
+
+body {
+  margin: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+/**
+ * サイト用のカードコンポーネント
+ */
+/**
+ * サイト全体のデザイン設定
+ */
+/**
+ * スペースに関するmixin
+ */
+/**
+ * フォントに関するmixin
+ */
+/**
+ * アイコンに関するmixin
+ */
+/**
+ * カードの基本構造定義
+ */
+.c-CardSample {
+  width: 320px;
+}
+
+.c-CardSample__image, .c-CardSample__copy {
+  border: 1.5px solid #e0e0e0;
+}
+
+.c-CardSample__image {
+  height: 180px;
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.c-CardSample__copy {
+  padding: 15px;
+  border-top: 0;
+  border-radius: 0 0 6px 6px;
+}
+
+.c-CardSample__title {
+  margin: 0 0 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.c-CardSample__description {
+  margin: 0 0 15px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.c-CardSample__footer {
+  font-size: .8rem;
+  line-height: 1.4;
+  color: #999;
+}
+
+.c-CardSample__date::before {
+  padding-right: .25em;
+  font-family: FontAwesome;
+  content: "\f017";
+}
+
+/**
+ * サイト用のメディアコンポーネント
+ */
+/**
+ * サイト全体のデザイン設定
+ */
+/**
+ * スペースに関するmixin
+ */
+/**
+ * フォントに関するmixin
+ */
+/**
+ * アイコンに関するmixin
+ */
+/**
+ * サイトに依存しないオブジェクトの基本構造定義（object/media.scss）
+ */
+/**
+ * サイトに依存しないユーティリティ関数やMixin
+ */
+.c-MediaSample::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.c-MediaSample__image {
+  float: left;
+  width: 140px;
+  height: 120px;
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.c-MediaSample__copy {
+  min-height: 120px;
+  margin: 0 0 0 150px;
+}
+
+.c-MediaSample__title {
+  margin: 0 0 10px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.c-MediaSample__description {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+.c-MediaSample__footer {
+  font-size: .8rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.c-MediaSample__date {
+  color: #999;
+}
+
+.c-MediaSample__date::before {
+  padding-right: .25em;
+  font-family: FontAwesome;
+  content: "\f017";
+}
+
+.c-MediaMini::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.c-MediaMini__image {
+  float: left;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-origin: border-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.c-MediaMini__copy {
+  min-height: 60px;
+  margin: 0 0 0 70px;
+}
+
+.c-MediaMini__description {
+  margin: 0 0 5px;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #666;
+}
+
+.c-MediaMini__footer {
+  font-size: .8rem;
+  line-height: 1.4;
+  color: #999;
+}
+
+/**
+ * パネル（component/panel.scss）
+ */
+/**
+ * サイト全体のデザイン設定
+ */
+/**
+ * スペースに関するmixin
+ */
+/**
+ * フォントに関するmixin
+ */
+/**
+ * アイコンに関するmixin
+ */
+.c-Panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.c-Panel--col3spaced .c-Panel__item {
+  width: calc((100% - 10px * 2) / 3);
+  margin-bottom: 10px;
+}
+
+/**
+ * サイトの右サイド用リストコンテナ（component/side-list.scss）
+ */
+/**
+ * サイト全体のデザイン設定
+ */
+/**
+ * スペースに関するmixin
+ */
+/**
+ * フォントに関するmixin
+ */
+/**
+ * アイコンに関するmixin
+ */
+.c-SideList__item {
+  margin: 5px;
+  padding: 5px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/**
+ * サイト用のタブコンポーネント（component/tab-sample.scss）
+ * （タブの基本構造と装飾用mixinを取り込んで、足りない部分を定義する）
+ */
+/**
+ * サイト全体のデザイン設定
+ */
+/**
+ * スペースに関するmixin
+ */
+/**
+ * フォントに関するmixin
+ */
+/**
+ * アイコンに関するmixin
+ */
+/**
+ * サイトに依存しないオブジェクトの基本構造定義（object/tab.scss）
+ */
+/**
+ * サイトに依存しないユーティリティ関数やMixin
+ */
+.c-TabSample__tablist {
+  display: block;
+}
+
+.c-TabSample__tablist::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.c-TabSample__tab {
+  display: inline-block;
+  float: left;
+  cursor: pointer;
+}
+
+.c-TabSample__panel {
+  display: none;
+}
+
+.c-TabSample__panel[data-selected="true"] {
+  display: block;
+}
+
+.c-TabSample__tablist {
+  border-bottom: 2px solid #9eb4db;
+}
+
+.c-TabSample__tab {
+  position: relative;
+  margin-bottom: -2px;
+  border: 2px solid #9eb4db;
+}
+
+.c-TabSample__tab[data-selected="true"]::after {
+  position: absolute;
+  display: block;
+  left: 0px;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #9eb4db;
+  content: "";
+}
+
+.c-TabSample__panel {
+  border: 2px solid #9eb4db;
+  border-top: 0;
+}
+
+.c-TabSample__tab {
+  color: #1d3994;
+}
+
+.c-TabSample__tab[data-selected="true"] {
+  color: #333;
+}
+
+.c-TabSample__tab {
+  background-color: #e6ecfe;
+}
+
+.c-TabSample__tab[data-selected="true"]::after {
+  background-color: #fff;
+}
+
+.c-TabSample [data-selected="true"] {
+  background-color: #fff;
+}
+
+.c-TabSample__tab:not(:first-child) {
+  margin-left: -2px;
+}
+
+.c-TabSample__tab {
+  padding: 5px 15px;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.c-TabSample__panel {
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 1.4;
+}

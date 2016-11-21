@@ -1,0 +1,97 @@
+/**
+ * サイトに依存しないオブジェクトの基本構造定義（object/tab.scss）
+ */
+@import "utility";
+
+@mixin o-Tab {
+  &__tablist {
+    @include clearfix;
+    display: block;
+  }
+
+  &__tab {
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+  }
+
+  &__panel {
+    display: none;
+
+    &[data-selected="true"] {
+      display: block;
+    }
+  }
+}
+
+// タブにボーダーをつけるmixin
+@mixin o-Tab--Border($borderWidth, $borderColor, $activeBgColor: $borderColor) {
+  &__tablist {
+    border-bottom: $borderWidth solid $borderColor;
+  }
+
+  &__tab {
+    position: relative;
+    margin-bottom: -$borderWidth;
+    border: $borderWidth solid $borderColor;
+
+    // 選択されているタブの下ボーダーを上書きする
+    &[data-selected="true"]::after {
+      position: absolute;
+      display: block;
+      left: 0px;
+      bottom: -$borderWidth;
+      width: 100%;
+      height: $borderWidth;
+      background-color: $activeBgColor;
+      content: "";
+    }
+  }
+
+  &__panel {
+    border: $borderWidth solid $borderColor;
+    border-top: 0;
+  }
+}
+
+// タブを角丸にするmixin
+@mixin o-Tab--Rounded($radiusX, $radiusY: $radiusX) {
+  &__tab {
+    border-top-left-radius: $radiusX $radiusY;
+    border-top-right-radius: $radiusX $radiusY;
+  }
+}
+
+// タブテキストに色をつけるmixin
+@mixin o-Tab--Color($activeColor, $inactiveColor: $activeColor) {
+  &__tab {
+    color: $inactiveColor;
+
+    &[data-selected="true"] {
+      color: $activeColor;
+    }
+  }
+}
+
+// タブに背景色をつけるmixin
+@mixin o-Tab--BgColor($activeBgColor, $inactiveBgColor: $activeBgColor) {
+  &__tab {
+    background-color: $inactiveBgColor;
+
+    // 選択されているタブの下ボーダーを上書きする
+    &[data-selected="true"]::after {
+      background-color: $activeBgColor;
+    }
+  }
+
+  [data-selected="true"] {
+    background-color: $activeBgColor;
+  }
+}
+
+// タブの間隔を調整するmixin
+@mixin o-Tab--Spacing($spacing) {
+  &__tab:not(:first-child) {
+    margin-left: $spacing;
+  }
+}

@@ -1,0 +1,16 @@
+/**
+ * HTMLリセットなど
+ */
+@import url("../node_modules/sanitize.css/sanitize.css");
+
+:root {
+    font-size: 80%;
+}
+
+body {
+    margin: 2em;
+}
+
+ul {
+    list-style: none;
+}
