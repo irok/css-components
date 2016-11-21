@@ -1,10 +1,43 @@
 /**
- * サイトに依存しないオブジェクトの基本構造定義（object/media.scss）
- */
+# メディアの基本構造
+
+## 実装例
+```html
+<article class="MyMedia">
+  <a href="#">
+    <!-- 画像サイズに影響されないようにするため、background で画像を指定する -->
+    <div class="MyMedia__image" style="background-image: url('image-url')"></div>
+    <div class="MyMedia__copy">
+      紹介文など（ここは各コンポーネントが独自実装してよい）
+    </div>
+  </a>
+</article>
+```
+
+```scss
+.MyCard {
+    @include o-Media(60px, 60px, 10px);
+
+    &__copy {
+        フォントの設定など
+    }
+}
+```
+
+## インターフェース
+@param $imgWidth     - 画像の幅
+@param $imgHeight    - 画像の高さ
+@param $imgMargin    - image と copy の間のマージン
+*/
 @import "utility";
 
 @mixin o-Media($imgWidth, $imgHeight, $imgMargin) {
   @include clearfix;
+
+  // 全体を囲むリンクはブロックにする
+  & > a {
+    display: block;
+  }
 
   &__image {
     float: left;

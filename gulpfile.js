@@ -7,7 +7,10 @@ gulp.task('build', function() {
     return gulp.src('./sass/site/**/*.scss')
         .pipe(sass({
             includePaths: ['./sass/'],
-            outputStyle: 'expanded'
+            outputStyle: 'expanded',
+            importer: [
+                require('sass-module-importer')()
+            ]
         }))
         .pipe(gulp.dest('./css/'));
 });

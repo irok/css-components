@@ -1,7 +1,8 @@
 /**
  * HTMLリセットなど
  */
-@import url("../node_modules/sanitize.css/sanitize.css");
+@import "html5-reset/assets/css/reset.css";
+@import "sanitize.css/sanitize.css";
 
 :root {
     font-size: 80%;
@@ -11,6 +12,6 @@ body {
     margin: 2em;
 }
 
-ul {
-    list-style: none;
+a {
+    text-decoration: none;
 }

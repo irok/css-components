@@ -1,8 +1,44 @@
 /**
- * カードの基本構造定義
- */
+# カードの基本構造
+
+## 実装例
+```html
+<article class="MyCard">
+  <a href="#">
+    <!-- 画像サイズに影響されないようにするため、background で画像を指定する -->
+    <div class="MyCard__image" style="background-image: url('image-url')"></div>
+    <div class="MyCard__copy">
+      紹介文など（ここは各コンポーネントが独自実装してよい）
+    </div>
+  </a>
+</article>
+```
+
+```scss
+.MyCard {
+    @include o-Card(60px, 60px, 10px, 1px, #ccc, 5px);
+
+    &__copy {
+        フォントの設定など
+    }
+}
+```
+
+## インターフェース
+@param $imgWidth       - 画像の幅
+@param $imgHeight      - 画像の高さ
+@param $padding        - copy のパディング
+@param $borderWidth    - 全体を囲む border の太さ
+@param $borderColor    - 全体を囲む border の色
+@param [$borderRadius] - 全体を囲む border の角の丸み
+*/
 @mixin o-Card($imgWidth, $imgHeight, $padding, $borderWidth, $borderColor, $borderRadius) {
   width: $imgWidth;
+
+  // 全体を囲むリンクはブロックにする
+  & > a {
+    display: block;
+  }
 
   &__image, &__copy {
     border: $borderWidth solid $borderColor;
