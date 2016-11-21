@@ -13,22 +13,22 @@
   &__title {
     @include space-stack-s;
     @include fontset-title-m;
+    color: $color-title;
   }
 
   &__description {
     @include space-stack-s;
     @include fontset-text-m;
-    color: $color-title;
+    color: $color-description;
   }
 
   &__footer {
     @include fontset-text-s;
-    color: $color-description;
+    color: $color-footer;
   }
 
   &__date {
     @include icon-date;
-    color: $color-footer;
   }
 }
 

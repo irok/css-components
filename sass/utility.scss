@@ -1,7 +1,7 @@
 /**
  * サイトに依存しないユーティリティ関数やMixin
  */
-@mixin clearfix {
+@mixin u-clearfix {
   &::after {
     content: "";
     display: block;

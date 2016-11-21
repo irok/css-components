@@ -5,7 +5,7 @@
 
 @mixin o-Tab {
   &__tablist {
-    @include clearfix;
+    @include u-clearfix;
     display: block;
   }
 

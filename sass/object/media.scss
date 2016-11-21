@@ -32,7 +32,7 @@
 @import "utility";
 
 @mixin o-Media($imgWidth, $imgHeight, $imgMargin) {
-  @include clearfix;
+  @include u-clearfix;
 
   // 全体を囲むリンクはブロックにする
   & > a {
