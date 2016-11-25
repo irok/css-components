@@ -1,8 +1,43 @@
 /**
- * サイトに依存しないオブジェクトの基本構造定義（object/tab.scss）
- */
+# タブ
+
+## 実装例
+```html
+<div class="MyTab" data-app="tab" data-selected-index="0">
+  <ul class="MyTab__tablist">
+    <li class="MyTab__tab">tab1</li>
+    <li class="MyTab__tab">tab2</li>
+    <li class="MyTab__tab">tab3</li>
+  </ul>
+  <div class="MyTab__panel">content1</div>
+  <div class="MyTab__panel">content2</div>
+  <div class="MyTab__panel">content3</div>
+</div>
+```
+
+```scss
+.MyTab {
+  @include o-Tab;
+  @include o-Tab--Border(2px, #9eb4db);
+  @include o-Tab--Color(#333, #1d3994);
+  @include o-Tab--BgColor(#fff, #e6ecfe);
+  @include o-Tab--Spacing(-2px);
+
+  &__tab {
+    @include space-inset-ssm;
+    @include fontset-title-s;
+  }
+
+  &__panel {
+    @include space-inset-s;
+    @include fontset-text-m;
+  }
+}
+```
+*/
 @import "utility";
 
+// タブの基本構造
 @mixin o-Tab {
   &__tablist {
     @include u-clearfix;

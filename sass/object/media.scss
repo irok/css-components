@@ -15,7 +15,7 @@
 ```
 
 ```scss
-.MyCard {
+.MyMedia {
     @include o-Media(60px, 60px, 10px);
 
     &__copy {
